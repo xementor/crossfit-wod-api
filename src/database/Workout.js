@@ -28,7 +28,6 @@ const getOneWorkout = (workoutId) =>{
 
     try {
         const workout = DB.workouts.find((workout) => workout.id === workoutId)
-
         if(!workout){
             throw {
                 status: 400,

@@ -1,2 +1,9 @@
 X starting project
 ! add record and memeber crud option
+    X member getAll
+    ! member getOne
+    ! add one
+    ! updateOne
+    ! deleteOne
+
+! crud for record
