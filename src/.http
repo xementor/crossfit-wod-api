@@ -1,9 +1,27 @@
-get http://localhost:3000/api/v1/workouts
+get http://localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6
 
 ###
-POST http://localhost:3000/api/v1/workouts/
+PATCH  http://localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6
 Content-Type: application/json
 
 {
-    "name": "hi"
+   
+    "mode": "Extra Time",
+    "equipment": [
+        "barbell",
+        "rope"
+    ],
+    "exercises": [
+        "21 thrusters",
+        "12 rope climbs, 15 ft",
+        "15 thrusters",
+        "9 rope climbs, 15 ft",
+        "9 thrusters",
+        "6 rope climbs, 15 ft"
+    ],
+    "trainerTips": [
+        "Split the 21 thrusters as needed",
+        "Try to do the 9 and 6 thrusters unbroken",
+        "RX Weights: 115lb/75lb"
+    ]
 }
