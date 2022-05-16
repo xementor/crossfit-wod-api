@@ -27,6 +27,7 @@ const createNewWorkout = (newWorkout) =>{
 const getOneWorkout = (workoutId) =>{
 
     try {
+        console.log(DB.workouts);
         const workout = DB.workouts.find((workout) => workout.id === workoutId)
         if(!workout){
             throw {

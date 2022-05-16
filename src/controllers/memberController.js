@@ -13,12 +13,44 @@ const getAllmembers = (req,res) =>{
         );
         
     }
-    res.send("hi");
 }
 
 const getOnemember = (req, res) =>{
-    res.send("hellow");
+    try {
+        const {params: {memberId}} = req;
+        const member = memberService.getOnemember(memberId);
+        res.send({data: member});
+    } catch (error) {
+        res.status(error.status || 500).send({status: "failed", data: {error: error.message || error}});
+    }
 }
 
+const addOnemember = (req, res) =>{
+    const {name, gender, dateOfBirth, email, password} = req.body;
+    if(
+        !name ||
+        !gender ||
+        !dateOfBirth ||
+        !email ||
+        !password
+    ){
+        req.status(200).send({message: "All field should fillOut"});
+    }
+    const newMember = {
+        name: name,
+        gender: gender,
+        dateOfBirth: dateOfBirth,
+        email: email,
+        password: password
+    }
+    try{
+        const addedMember = memberService.addOnemember(newMember);
+        res.status(201).send({status: "ok", data: addOnemember});
+        
+    } catch (error) {
+        res.status(error.status || 500).send({error: error});
+        
+    }
+}
 
-module.exports = {getAllmembers, getOnemember};
+module.exports = {getAllmembers, getOnemember, addOnemember};

@@ -1,9 +1,20 @@
-get http://localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6
+get http://localhost:8192/api/v1/members/12a410bc-849f-4e7e-bfc8-4ef283ee4b19
+###
+post http://localhost:8192/api/v1/members/
+Content-Type: application/json
+
+{
+    "name": "ih.zonaid",
+    "gender": "male",
+    "dateOfBirth": "2000-08-01",
+    "email": "ahammedzonaid@gmail.com",
+    "password": "henten"
+}
 ###
 
-get  http://localhost:3000/api/v1/workouts/43d9aaa-608c-49a7-a004-66305ad4ab50/records
+get  http://localhost:8000/api/v1/workouts/43d9aaa-608c-49a7-a004-66305ad4ab50/records
 ###
-PATCH  http://localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6
+PATCH  http://localhost:8000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6
 Content-Type: application/json
 
 {

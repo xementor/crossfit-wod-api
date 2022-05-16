@@ -5,7 +5,7 @@ const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 const v1MemberRouter = require("./v1/routes/memberRoutes");
 
 const app = express(); 
-const PORT = process.env.PORT || 3000; 
+const PORT = process.env.PORT || 8192; 
 
 
 app.use(bodyParser.json());

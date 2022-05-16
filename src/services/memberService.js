@@ -9,5 +9,28 @@ const getAllmembers = () =>{
         throw {error: error}
     }
 }
+const getOnemember = (memberId) =>{
+    try {
+        const member = Member.getOnemember(memberId);
+        return member;
+    } catch (error) {
+        throw error;
+        
+    }
+}
 
-module.exports = {getAllmembers};
+const {v4: uuid} = require("uuid");
+const addOnemember = (newMember) =>{
+    const memberToAdd = {
+        id: uuid(),
+        ...newMember
+    }
+    try {
+        const createdMember = Member.insertOneMember(memberToAdd);
+        return createdMember;
+    } catch (error) {
+        
+    }
+}
+
+module.exports = {getAllmembers, getOnemember, addOnemember};
