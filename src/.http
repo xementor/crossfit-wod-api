@@ -1,4 +1,4 @@
-get http://localhost:8192/api/v1/members/12a410bc-849f-4e7e-bfc8-4ef283ee4b19
+get http://localhost:8192/api/v1/workouts?mode=amrap
 ###
 post http://localhost:8192/api/v1/members/
 Content-Type: application/json
