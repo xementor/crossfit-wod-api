@@ -25,16 +25,18 @@ const getOnemember = (memberId) =>{
 }
 
 const insertOneMember = (newMember) =>{
-    try {
-        const isAlreadyAdded = DB.members.findIndex((member) => member.name == newMember.name);
-        if(isAlreadyAdded) throw {status: 399, message: "this named user is already here"};
-        
+    const idexOfExistingMember = DB.members.findIndex((member) => member.name == newMember.name);
+    if(idexOfExistingMember > -1){
+        throw {status: 399, message: "this named user is already here"};
+    }
+    try{
         DB.members.push(newMember);
-        saveToDatabase.saveToDatabase(DB);
+        saveToDatabase(DB);
+        return newMember;
     } catch (error) {
-        throw {error: error};
+        throw {error: error.message};
         
     }
 }
 
-module.exports = {getAllmembers, getOnemember};
+module.exports = {getAllmembers, getOnemember, insertOneMember};

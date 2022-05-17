@@ -4,7 +4,7 @@ post http://localhost:8192/api/v1/members/
 Content-Type: application/json
 
 {
-    "name": "ih.zonaid",
+    "name": "Ih.zonaid",
     "gender": "male",
     "dateOfBirth": "2000-08-01",
     "email": "ahammedzonaid@gmail.com",

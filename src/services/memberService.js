@@ -29,6 +29,7 @@ const addOnemember = (newMember) =>{
         const createdMember = Member.insertOneMember(memberToAdd);
         return createdMember;
     } catch (error) {
+        throw {error: error.message};
         
     }
 }

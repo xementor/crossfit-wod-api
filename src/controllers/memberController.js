@@ -45,7 +45,7 @@ const addOnemember = (req, res) =>{
     }
     try{
         const addedMember = memberService.addOnemember(newMember);
-        res.status(201).send({status: "ok", data: addOnemember});
+        res.status(201).send({status: "ok", data: addedMember});
         
     } catch (error) {
         res.status(error.status || 500).send({error: error});
