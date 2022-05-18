@@ -53,4 +53,9 @@ const addOnemember = (req, res) =>{
     }
 }
 
-module.exports = {getAllmembers, getOnemember, addOnemember};
+const updateMember = (req,res)=>{
+    return req.data;
+
+}
+
+module.exports = {getAllmembers, getOnemember, addOnemember,updateMember};

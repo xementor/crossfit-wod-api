@@ -2,7 +2,7 @@ X starting project
 ! add record and memeber crud option
     X member getAll
     x member getOne
-    ! add one
+    x add one
     ! updateOne
     ! deleteOne
 
